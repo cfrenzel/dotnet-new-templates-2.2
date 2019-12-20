@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Camron Frenzel",
+  "classifications": [ "Common", "EFCore", "Migrations" ],
+  "tags": {
+    "language": "C#" 
+  },
+  "identity": "cfrenzel.migrations-project",
+  "name": "cfrenzel EFCore Migrations Project",
+  "shortName": "efcore-migrations-proj-2.2",
+  "sourceName": "SolutionName",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [ ".vs/**" ]
+        }
+      ]
+    }
+  ]
+}

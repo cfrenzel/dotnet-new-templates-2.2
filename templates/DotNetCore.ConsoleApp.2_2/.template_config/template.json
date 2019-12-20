@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Camron Frenzel",
+  "classifications": [ "Core", "Console" ],
+  "tags": {
+    "language": "C#" 
+  },
+  "identity": "cfrenzel.console",
+  "name": "Cfrenzel Console Application",
+  "shortName": "console-2.2",
+  "sourceName": "SolutionName",
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [ ".vs/**" ]
+        }
+      ]
+    }
+  ]
+}

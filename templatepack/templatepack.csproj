@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <PackageId>cfrenzel-templates</PackageId>
+    <Title>cfrenzel dotnet-new-templates</Title>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\DotNetCore.ConsoleApp.2_2\**\*" Exclude="templates\DotNetCore.ConsoleApp.2_2\**\bin\**;templates\DotNetCore.ConsoleApp.2_2\**\obj\**" />
+    <Content Include="templates\EFCore.MigrationsProjects_2.2\**\*" Exclude="templates\EFCore.MigrationsProjects_2.2\**\bin\**;templates\EFCore.MigrationsProjects_2.2\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
