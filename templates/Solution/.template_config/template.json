@@ -1,19 +1,19 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Camron Frenzel",
-  "classifications": [ "Core", "Console" ],
+  "classifications": [ "cfrenzel", "core", "solution" ],
   "tags": {
     "language": "C#" 
   },
-  "identity": "cfrenzel.console",
-  "name": "Cfrenzel Console Application",
-  "shortName": "console-2.2",
+  "identity": "cfrenzel.solution",
+  "name": "cfrenzel.solution",
+  "shortName": "cf-solution",
   "sourceName": "SolutionName",
   "sources": [
     {
       "modifiers": [
         {
-          "exclude": [ ".vs/**" ]
+          "exclude": [ ".vs/**", ".template_config/**"]
         }
       ]
     }
