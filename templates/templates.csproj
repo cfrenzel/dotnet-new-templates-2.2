@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <PackageId>cfrenzel-dotnet-new-templates-2.2</PackageId>
     <Title>cfrenzel dotnet-new-templates</Title>
     <IncludeContentInPack>true</IncludeContentInPack>
