@@ -3,7 +3,7 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <PackageId>cfrenzel-dotnet-new-templates</PackageId>
+    <PackageId>cfrenzel-dotnet-new-templates-2.2</PackageId>
     <Title>cfrenzel dotnet-new-templates</Title>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -11,8 +11,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="EFCore.MigrationsProjects_2.2\**" Exclude="EFCore.MigrationsProjects_2.2\**\bin\**;EFCore.MigrationsProjects_2.2\**\obj\**;EFCore.MigrationsProjects_2.2\**\.vs\**" />
-    <Content Include="DotNetCore.ConsoleApp.2_2\src\**" Exclude="DotNetCore.ConsoleApp.2_2\src\**\bin\**;DotNetCore.ConsoleApp.2_2\src\**\obj\**;DotNetCore.ConsoleApp.2_2\src\**\.vs\**" />
+    <Content Include="EFCore.MigrationProjects\**" Exclude="EFCore.MigrationProjects\**\bin\**;EFCore.MigrationProjects\**\obj\**;EFCore.MigrationProjects\**\.vs\**" />
+    <Content Include="ConsoleApp\**" Exclude="ConsoleApp\SolutionName.sln;ConsoleApp\**\bin\**;ConsoleApp\**\obj\**;ConsoleApp\**\.vs\**" />
     <Content Include="Solution\**" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\**\.vs\**" />
     <Compile Remove="**\*" />
   </ItemGroup>

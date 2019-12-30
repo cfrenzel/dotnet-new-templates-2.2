@@ -15,8 +15,9 @@ namespace SolutionName.ConsoleApp
 {
     public class Program
     {
-        public static IConfigurationRoot _config;
-        public static IServiceProvider _serviceProvider;
+        private static IConfigurationRoot _config;
+        private static IServiceProvider _serviceProvider;
+        private static ILogger<Program> _logger;
 
         public static async Task Main(string[] args)
         {
@@ -26,16 +27,16 @@ namespace SolutionName.ConsoleApp
                 .AddUserSecrets<Program>()
                 .AddEnvironmentVariables()
                 .Build();
-            
+
             var services = new ServiceCollection();
 
             services.AddSingleton(_config);
 
             services.AddLogging(builder => {
-                 builder.AddConfiguration(_config.GetSection("Logging"));
-                 builder.AddDebug();
-             });
-          
+                builder.AddConfiguration(_config.GetSection("Logging"));
+                builder.AddDebug();
+            });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                  options.UseSqlServer(
                     _config.GetConnectionString("ApplicationConnection")
@@ -44,6 +45,7 @@ namespace SolutionName.ConsoleApp
             services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
 
             _serviceProvider = services.BuildServiceProvider();
+            _logger = _serviceProvider.GetService<ILogger<Program>>();
 
             await DoWork();
 
@@ -54,6 +56,7 @@ namespace SolutionName.ConsoleApp
 
         public static Task DoWork()
         {
+            _logger.LogInformation("Doing Work");
             return Task.CompletedTask;
         }
 
