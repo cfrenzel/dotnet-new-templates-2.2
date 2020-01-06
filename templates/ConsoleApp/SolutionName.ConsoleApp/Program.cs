@@ -17,9 +17,26 @@ namespace SolutionName.ConsoleApp
     {
         private static IConfigurationRoot _config;
         private static IServiceProvider _serviceProvider;
-        private static ILogger<Program> _logger;
+        private static ILogger<Program> _log;
 
         public static async Task Main(string[] args)
+        {
+            Initialize();
+           
+            _log.LogDebug("Doing Work");
+         
+            //using (var scope = _serviceProvider.CreateScope())
+            //{
+            //    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+            //    var mediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+            //    await db.SaveChangesAsync();
+            //}
+
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
+        }
+        private static void Initialize()
         {
             _config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -34,6 +51,7 @@ namespace SolutionName.ConsoleApp
 
             services.AddLogging(builder => {
                 builder.AddConfiguration(_config.GetSection("Logging"));
+                //builder.AddConsole();
                 builder.AddDebug();
             });
 
@@ -45,20 +63,13 @@ namespace SolutionName.ConsoleApp
             services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
 
             _serviceProvider = services.BuildServiceProvider();
-            _logger = _serviceProvider.GetService<ILogger<Program>>();
+            _log = _serviceProvider.GetService<ILogger<Program>>();
 
-            await DoWork();
-
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadLine();
+          
         }
 
 
-        public static Task DoWork()
-        {
-            _logger.LogInformation("Doing Work");
-            return Task.CompletedTask;
-        }
+       
 
     }
 }
