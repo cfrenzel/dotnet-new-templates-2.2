@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -13,7 +14,7 @@ using MediatR;
 
 namespace SolutionName.ConsoleApp
 {
-    public class Program
+    public class Program : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
         private static IConfigurationRoot _config;
         private static IServiceProvider _serviceProvider;
@@ -21,7 +22,7 @@ namespace SolutionName.ConsoleApp
 
         public static async Task Main(string[] args)
         {
-            Initialize();
+            _init();
            
             _log.LogDebug("Doing Work");
          
@@ -36,7 +37,7 @@ namespace SolutionName.ConsoleApp
             Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
         }
-        private static void Initialize()
+        private static void _init()
         {
             _config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -68,8 +69,13 @@ namespace SolutionName.ConsoleApp
           
         }
 
+        public ApplicationDbContext CreateDbContext(string[] args)
+        {
+            _init();
+            return _serviceProvider.GetService<ApplicationDbContext>();
+        }
 
-       
+
 
     }
 }
