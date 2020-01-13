@@ -1,3 +1,4 @@
+dotnet new templates
 =======
 
 
