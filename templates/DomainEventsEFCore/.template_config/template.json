@@ -5,7 +5,7 @@
   "tags": {
     "language": "C#"
   },
-  "identity": "cfrenzel.console",
+  "identity": "cfrenzel.domainevents",
   "name": "cfrenzel.domainevents.mediatr",
   "shortName": "cf-domain-events",
   "sourceName": "SolutionName",

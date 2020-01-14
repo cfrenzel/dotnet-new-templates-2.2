@@ -5,7 +5,7 @@
   "tags": {
     "language": "C#"
   },
-  "identity": "cfrenzel.console",
+  "identity": "cfrenzel.xunit.integration",
   "name": "cfrenzel.xunit.integration",
   "shortName": "cf-xIntegration",
   "sourceName": "SolutionName",

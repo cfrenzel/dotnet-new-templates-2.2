@@ -11,12 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="EFCore.MigrationProjects\**" Exclude="EFCore.MigrationProjects\**\bin\**;EFCore.MigrationProjects\**\obj\**;EFCore.MigrationProjects\**\.vs\**" />
+    <Content Include="EFCore.MigrationProjects\**" Exclude="EFCore.MigrationProjects\SolutionName.sln;EFCore.MigrationProjects\**\bin\**;EFCore.MigrationProjects\**\obj\**;EFCore.MigrationProjects\**\.vs\**" />
     <Content Include="ConsoleApp\**" Exclude="ConsoleApp\SolutionName.sln;ConsoleApp\**\bin\**;ConsoleApp\**\obj\**;ConsoleApp\**\.vs\**" />
-    <Content Include="XUnitIntegrationTests\**" Exclude="XUnitIntegrationTests\SolutionName.sln;XUnitIntegrationTests\**\bin\**;XUnitIntegrationTests\**\obj\**;XUnitIntegrationTests\**\.vs\**" />
     <Content Include="XUnitTests\**" Exclude="XUnitTests\SolutionName.sln;XUnitTests\**\bin\**;XUnitTests\**\obj\**;XUnitTests\**\.vs\**" />
     <Content Include="Solution\**" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\**\.vs\**" />
     <Content Include="DomainEventsEFCore\**" Exclude="DomainEventsEFCore\SolutionName.sln;DomainEventsEFCore\SolutionName.DomainEventsEFCore.csproj;DomainEventsEFCore\**\bin\**;DomainEventsEFCore\**\obj\**;DomainEventsEFCore\**\.vs\**"/>
+    <Content Include="XUnitIntegrationTests\**" Exclude="XUnitIntegrationTests\SolutionName.sln;XUnitIntegrationTests\**\bin\**;XUnitIntegrationTests\**\obj\**;XUnitIntegrationTests\**\.vs\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
