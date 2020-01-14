@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Camron Frenzel",
+  "classifications": [ "cfrenzel", "ddd", "events" ],
+  "tags": {
+    "language": "C#"
+  },
+  "identity": "cfrenzel.console",
+  "name": "cfrenzel.domainevents.mediatr",
+  "shortName": "cf-domain-events",
+  "sourceName": "SolutionName",
+  "sources": [
+    {
+      "modifiers": [
+        { "exclude": [ ".vs/**", ".template_config/**" ] }
+      ]
+    }
+  ]
+}
